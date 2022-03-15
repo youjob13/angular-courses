@@ -1,0 +1,16 @@
+@mixin base-text() {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+@mixin base-title() {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 75%;
+  margin: 0 auto;
+}

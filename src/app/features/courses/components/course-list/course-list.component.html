@@ -1,0 +1,23 @@
+<ul class="container">
+  <app-course-card
+    class="course-card"
+    *ngFor="let course of courses"
+    [card]="course"
+  >
+    <div class="buttons">
+      <app-button (click)="onShow()" [text]="'Show course'"></app-button>
+      <ng-container *ngIf="isCoursesEditable">
+        <app-button (click)="onEdit()" iconName="edit"></app-button>
+        <app-button (click)="onRemove()" iconName="remove"></app-button>
+      </ng-container>
+    </div>
+  </app-course-card>
+</ul>
+
+<app-modal-window
+  #windowModal
+  *ngIf="showModalWindow"
+  [title]="'Remove'"
+  [message]="'Are you sure that you want to remove this item ?'"
+  (do)="onDo($event)"
+></app-modal-window>

@@ -1,0 +1,13 @@
+@import "../../../../app.component.scss";
+
+.container {
+  display: grid;
+  row-gap: 2.4rem;
+
+  margin: 3.2rem auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}

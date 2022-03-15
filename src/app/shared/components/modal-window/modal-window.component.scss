@@ -1,0 +1,51 @@
+@import "../../../app.component.scss";
+
+:host {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+
+  background-color: rgba(#000, 0.5);
+}
+
+.content {
+  @include base-text();
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 0.6rem;
+}
+
+.close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+
+  ::ng-deep button {
+    border: none;
+    background: rgb(201, 201, 201);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1.35rem;
+}

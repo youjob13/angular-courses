@@ -1,0 +1,21 @@
+<li class="wrapper">
+  <div>
+    <h4 class="title">{{ card.title }}</h4>
+    <p class="description">{{ card.description }}</p>
+  </div>
+  <div class="right-side">
+    <div class="info">
+      <div class="authors">
+        <strong>Authors: </strong><span>{{ card.authors }}</span>
+      </div>
+      <div class="duration">
+        <strong>Duration: </strong><span>{{ card.duration | duration }}</span>
+      </div>
+      <div class="creation-date">
+        <strong>Created: </strong
+        ><span>{{ card.creationDate | date: "dd.MM.YYYY" }}</span>
+      </div>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</li>
