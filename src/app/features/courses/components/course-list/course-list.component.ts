@@ -7,14 +7,10 @@ import {
   OnInit,
   Output,
   ViewChild,
-  ViewContainerRef,
 } from '@angular/core';
+
 import { coursesCards } from '../../../../mock';
 import { ICourseCard } from '../../courses.model';
-
-// const messagesMap: { [key: string]: string } = {
-//   remove: 'Are you sure that you want to remove this course ?',
-// };
 
 @Component({
   selector: 'app-course-list',
@@ -55,5 +51,9 @@ export class CourseListComponent implements OnInit {
     if (event) {
       this.removeCourse.emit('id');
     }
+  }
+
+  public trackByCardTitle(i: number, item: ICourseCard): string {
+    return item.title;
   }
 }

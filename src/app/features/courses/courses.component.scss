@@ -3,9 +3,3 @@
 .username {
   @include base-text();
 }
-
-.right-side {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}

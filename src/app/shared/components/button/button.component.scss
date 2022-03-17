@@ -1,13 +1,11 @@
 @import "../../../app.component.scss";
 
-button {
+:host {
   @include base-text();
 
   display: block;
   padding: 0.17rem 0.3rem;
   transition: 0.2s;
-  margin: 0 auto;
-  height: 100%;
 
   &:hover {
     background-color: rgb(158, 157, 157);
@@ -26,4 +24,10 @@ button {
     background-color: rgb(158, 157, 157);
     color: #fff;
   }
+}
+
+// I don't understand how I should use this approach to style 'active' button state
+:host-context(.active) {
+  background-color: rgb(212, 211, 211);
+  transform: scale(0.94);
 }

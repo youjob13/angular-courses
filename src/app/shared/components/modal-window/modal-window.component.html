@@ -3,9 +3,9 @@
   <p class="title">{{ message }}</p>
 
   <div class="buttons">
-    <app-button [text]="okButtonText" (click)="onOk()"></app-button>
-    <app-button [text]="cancelButtonText" (click)="onCancel()"></app-button>
+    <button my-button [text]="okButtonText" (click)="onOk()"></button>
+    <button my-button [text]="cancelButtonText" (click)="onCancel()"></button>
   </div>
 
-  <app-button class="close" iconName="close" (click)="onClose()"></app-button>
+  <button my-button class="close" iconName="cross" (click)="onClose()"></button>
 </div>

@@ -1,14 +1,14 @@
 <ul class="container">
   <app-course-card
     class="course-card"
-    *ngFor="let course of courses"
+    *ngFor="let course of courses; trackBy: trackByCardTitle"
     [card]="course"
   >
     <div class="buttons">
-      <app-button (click)="onShow()" [text]="'Show course'"></app-button>
+      <button my-button (click)="onShow()" text="Show course"></button>
       <ng-container *ngIf="isCoursesEditable">
-        <app-button (click)="onEdit()" iconName="edit"></app-button>
-        <app-button (click)="onRemove()" iconName="remove"></app-button>
+        <button my-button (click)="onEdit()" iconName="pen"></button>
+        <button my-button (click)="onRemove()" iconName="trash"></button>
       </ng-container>
     </div>
   </app-course-card>
